@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>practice</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-  </head>
-  <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-    {% for post in posts %}
-      <div class="item">
-        <p>published: {{post.published_date}}</p>
-        <h1><a href="">{{post.title}}</a></h1>
-        <p>{{post.text|linebreaksbr}}</p>
-      </div>
-    {% endfor %}
-    <a href="http://incoding.kr"><img src="http://incoding.kr/logo.png" width="200px"></a>
-  </body>
-</html>
+{%extends 'blog/base.html'%}
+
+{%block content%}
+{% for post in posts %}
+<tr class="item post">
+  <td>{{post.author}}</td>
+  <td><a href="{%url 'post_detail' pk=post.pk%}">{{post.title}}</a></td>
+  <td class="text">{{post.text|linebreaksbr}}</td>
+  <td>{{post.published_date}}</td>
+</tr>
+{% endfor %}
+{%endblock%}

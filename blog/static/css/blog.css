@@ -1,0 +1,28 @@
+#blog-title{
+  border-bottom: 1px solid #e0e0e0;
+  background: #6fb7da;
+}
+#blog-title h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0;
+}
+#board{
+  margin-top: 30px;
+  border: 1px solid #e0e0e0;
+  padding: 0;
+}
+.item.head{
+  font-weight: 400;
+  background: #6fb7da;
+  color: white;
+}
+.item h1{
+  font-size: 1.3rem;
+}
+th,td{border-radius: 0;padding-left: 20px}
+.item td{
+  border-left: 1px solid #e0e0e0;
+}
+tr.item.post:hover{background: #e0e0e0;cursor: pointer;}

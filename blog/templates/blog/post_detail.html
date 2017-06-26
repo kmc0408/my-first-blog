@@ -1,0 +1,14 @@
+{%extends 'blog/base.html'%}
+
+{% block content %}
+    <tr class="item post">
+      <td>{{post.author}}</td>
+      {% if post.published_date %}
+        <div class="date">
+          {{ post.published_date }}
+        </div>
+      {% endif %}
+      <td>{{post.title}}</td>
+      <td>{{post.text|linebreaksbr}}</td>
+    </tr>
+{% endblock %}
